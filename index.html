@@ -1,51 +1,249 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Negocio</title>
-  <style>
-    body {font-family: Arial; margin:0; background:#f2f2f2;}
-    header {background: linear-gradient(45deg,#007BFF,#00c6ff); color:white; text-align:center; padding:30px;}
-    nav {background:#333; padding:10px; text-align:center;}
-    nav a {color:white; margin:0 15px; text-decoration:none; font-weight:bold;}
-    section {padding:20px; max-width:1000px; margin:auto;}
-    .grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:15px;}
-    .box {background:white; padding:15px; border-radius:10px;}
-    img {width:100%; border-radius:10px;}
-    .whatsapp {position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px; border-radius:50%; text-decoration:none;}
-  </style>
+<meta charset="UTF-8">
+<title>PROVIDEC - Soluciones Industriales</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #eef2f5;
+}
+
+header {
+  background: linear-gradient(90deg,#0a3d62,#1e90ff);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  background: #1e272e;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  padding: 15px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1581092335878-2d9ff86ca2bf') center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.btn {
+  background: orange;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 30px;
+}
+
+.productos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.card button {
+  background: #0a3d62;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.ofertas {
+  background: #f39c12;
+  color: white;
+  text-align: center;
+}
+
+footer {
+  background: #1e272e;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  background: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  margin: 10% auto;
+  width: 300px;
+  border-radius: 10px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Mi Negocio</h1>
-  <p>Ventas y servicios</p>
+<h1>PROVIDEC</h1>
+<p>Repuestos de Calderas & Mantenimiento Industrial</p>
 </header>
 
 <nav>
-  <a href="#">Inicio</a>
-  <a href="#">Productos</a>
-  <a href="#">Contacto</a>
+<a href="#inicio">Inicio</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#productos">Productos</a>
+<a href="#servicios">Servicios</a>
+<a href="#ofertas">Ofertas</a>
+<a href="#contacto">Contacto</a>
+<a href="#" onclick="verCarrito()">🛒 (<span id="contador">0</span>)</a>
 </nav>
 
-<section>
-  <h2>Productos</h2>
-  <div class="grid">
-    <div class="box">
-      <img src="https://via.placeholder.com/300">
-      <h3>Producto 1</h3>
-      <p>$10</p>
-    </div>
-    <div class="box">
-      <img src="https://via.placeholder.com/300">
-      <h3>Producto 2</h3>
-      <p>$15</p>
-    </div>
-  </div>
+<section class="hero" id="inicio">
+<h2>Soluciones Industriales de Alto Nivel</h2>
+<p>Venta de repuestos y mantenimiento especializado</p>
+<a href="https://wa.me/593XXXXXXXXX" class="btn">Cotizar por WhatsApp</a>
 </section>
 
-<a class="whatsapp" href="https://wa.me/593999999999" target="_blank">💬</a>
+<section id="nosotros">
+<h2>Sobre Nosotros</h2>
+<p>PROVIDEC ofrece soluciones industriales confiables, repuestos de calidad y mantenimiento especializado en sistemas térmicos.</p>
+</section>
+
+<section id="productos">
+<h2>Productos</h2>
+
+<div class="productos">
+<div class="card">
+<h3>Válvula Industrial</h3>
+<p>$25</p>
+<button onclick="agregarCarrito('Válvula Industrial',25)">Agregar</button>
+</div>
+
+<div class="card">
+<h3>Sensor de Presión</h3>
+<p>$40</p>
+<button onclick="agregarCarrito('Sensor de Presión',40)">Agregar</button>
+</div>
+
+<div class="card">
+<h3>Termómetro Industrial</h3>
+<p>$30</p>
+<button onclick="agregarCarrito('Termómetro',30)">Agregar</button>
+</div>
+</div>
+</section>
+
+<section id="servicios">
+<h2>Servicios</h2>
+<ul>
+<li>Mantenimiento de calderas</li>
+<li>Inspección industrial</li>
+<li>Reparación de sistemas térmicos</li>
+</ul>
+</section>
+
+<section id="ofertas" class="ofertas">
+<h2>🔥 Oferta</h2>
+<p>10% de descuento en mantenimiento este mes</p>
+</section>
+
+<section id="contacto">
+<h2>Contacto</h2>
+<p>📞 099XXXXXXX</p>
+<p>📍 Milagro, Ecuador</p>
+</section>
+
+<footer>
+<p>© 2026 PROVIDEC</p>
+</footer>
+
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/593XXXXXXXXX" class="whatsapp">💬</a>
+
+<!-- CARRITO -->
+<div id="carritoModal" class="modal">
+<div class="modal-content">
+<h2>Carrito</h2>
+<ul id="listaCarrito"></ul>
+<p>Total: $<span id="total">0</span></p>
+<button onclick="enviarWhatsApp()">Finalizar compra</button>
+<button onclick="cerrarCarrito()">Cerrar</button>
+</div>
+</div>
+
+<script>
+let carrito = [];
+let total = 0;
+
+function agregarCarrito(nombre, precio) {
+  carrito.push({nombre, precio});
+  total += precio;
+  document.getElementById("contador").innerText = carrito.length;
+}
+
+function verCarrito() {
+  let lista = document.getElementById("listaCarrito");
+  lista.innerHTML = "";
+
+  carrito.forEach(p => {
+    let li = document.createElement("li");
+    li.innerText = p.nombre + " - $" + p.precio;
+    lista.appendChild(li);
+  });
+
+  document.getElementById("total").innerText = total;
+  document.getElementById("carritoModal").style.display = "block";
+}
+
+function cerrarCarrito() {
+  document.getElementById("carritoModal").style.display = "none";
+}
+
+function enviarWhatsApp() {
+  let mensaje = "Pedido:%0A";
+
+  carrito.forEach(p => {
+    mensaje += p.nombre + " - $" + p.precio + "%0A";
+  });
+
+  mensaje += "Total: $" + total;
+
+  window.open("https://wa.me/593939397256?text=" + mensaje);
+}
+</script>
 
 </body>
 </html>
+
