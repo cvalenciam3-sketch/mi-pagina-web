@@ -2,183 +2,214 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PROVIDEC - Soluciones Industriales</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial;
-  background: #eef2f5;
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family: Arial, sans-serif;
+  background:#f4f6f8;
+  scroll-behavior:smooth;
 }
 
-header {
-  background: linear-gradient(90deg,#0a3d62,#1e90ff);
-  color: white;
-  text-align: center;
-  padding: 20px;
+/* NAV */
+nav{
+  position:fixed;
+  width:100%;
+  background:#0a3d62;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  z-index:1000;
 }
 
-nav {
-  background: #1e272e;
-  text-align: center;
+nav a{
+  color:white;
+  padding:15px;
+  text-decoration:none;
 }
 
-nav a {
-  color: white;
-  padding: 15px;
-  display: inline-block;
-  text-decoration: none;
+nav a:hover{background:#1e90ff;}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background:url('https://images.unsplash.com/photo-1581092335878-2d9ff86ca2bf') center/cover;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
 }
 
-.hero {
-  background: url('https://images.unsplash.com/photo-1581092335878-2d9ff86ca2bf') center/cover;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
+.hero h1{font-size:50px;}
+.hero p{margin:10px 0;}
+
+.btn{
+  background:#e67e22;
+  padding:10px 20px;
+  color:white;
+  text-decoration:none;
 }
 
-.btn {
-  background: orange;
-  padding: 10px 20px;
-  color: white;
-  text-decoration: none;
+/* SECCIONES */
+section{
+  padding:60px 20px;
+  max-width:1100px;
+  margin:auto;
 }
 
-section {
-  padding: 30px;
+/* PRODUCTOS */
+.productos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
-.productos {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+.card{
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
 }
 
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 200px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+.card:hover{transform:translateY(-5px);}
+
+.card img{
+  width:100%;
+  border-radius:10px;
 }
 
-.card button {
-  background: #0a3d62;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+.card button{
+  background:#0a3d62;
+  color:white;
+  border:none;
+  padding:10px;
+  margin-top:10px;
+  cursor:pointer;
 }
 
-.ofertas {
-  background: #f39c12;
-  color: white;
-  text-align: center;
+/* SERVICIOS */
+.servicios{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
 }
 
-footer {
-  background: #1e272e;
-  color: white;
-  text-align: center;
-  padding: 10px;
+/* TESTIMONIOS */
+.testimonios{
+  background:#1e90ff;
+  color:white;
+  text-align:center;
+  padding:40px;
 }
 
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  font-size: 20px;
+/* FOOTER */
+footer{
+  background:#2f3640;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  padding:15px;
+  border-radius:50%;
+  color:white;
 }
 
 /* MODAL */
-.modal {
-  display: none;
-  position: fixed;
-  background: rgba(0,0,0,0.7);
-  width: 100%;
-  height: 100%;
+.modal{
+  display:none;
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
 }
 
-.modal-content {
-  background: white;
-  padding: 20px;
-  margin: 10% auto;
-  width: 300px;
-  border-radius: 10px;
+.modal-content{
+  background:white;
+  margin:10% auto;
+  padding:20px;
+  width:300px;
+  border-radius:10px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>PROVIDEC</h1>
-<p>Repuestos de Calderas & Mantenimiento Industrial</p>
-</header>
-
 <nav>
 <a href="#inicio">Inicio</a>
 <a href="#nosotros">Nosotros</a>
 <a href="#productos">Productos</a>
 <a href="#servicios">Servicios</a>
-<a href="#ofertas">Ofertas</a>
 <a href="#contacto">Contacto</a>
 <a href="#" onclick="verCarrito()">🛒 (<span id="contador">0</span>)</a>
 </nav>
 
+<!-- HERO -->
 <section class="hero" id="inicio">
-<h2>Soluciones Industriales de Alto Nivel</h2>
-<p>Venta de repuestos y mantenimiento especializado</p>
-<a href="https://wa.me/593939397256" class="btn">Cotizar por WhatsApp</a>
+<h1>PROVIDEC</h1>
+<p>Repuestos de calderas y mantenimiento industrial</p>
+<a href="https://wa.me/593939397256" class="btn">Solicitar Cotización</a>
 </section>
 
+<!-- NOSOTROS -->
 <section id="nosotros">
 <h2>Sobre Nosotros</h2>
-<p>PROVIDEC ofrece soluciones industriales confiables, repuestos de calidad y mantenimiento especializado en sistemas térmicos.</p>
+<p>PROVIDEC es una empresa especializada en soluciones industriales, ofreciendo repuestos de alta calidad y mantenimiento profesional para sistemas térmicos.</p>
 </section>
 
+<!-- PRODUCTOS -->
 <section id="productos">
 <h2>Productos</h2>
 
 <div class="productos">
 <div class="card">
+<img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758">
 <h3>Válvula Industrial</h3>
 <p>$25</p>
-<button onclick="agregarCarrito('Válvula Industrial',25)">Agregar</button>
+<button onclick="agregarCarrito('Válvula',25)">Agregar</button>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1581090700227-4c4b4f2b8cfa">
 <h3>Sensor de Presión</h3>
 <p>$40</p>
-<button onclick="agregarCarrito('Sensor de Presión',40)">Agregar</button>
-</div>
-
-<div class="card">
-<h3>Termómetro Industrial</h3>
-<p>$30</p>
-<button onclick="agregarCarrito('Termómetro',30)">Agregar</button>
+<button onclick="agregarCarrito('Sensor',40)">Agregar</button>
 </div>
 </div>
 </section>
 
+<!-- SERVICIOS -->
 <section id="servicios">
 <h2>Servicios</h2>
-<ul>
-<li>Mantenimiento de calderas</li>
-<li>Inspección industrial</li>
-<li>Reparación de sistemas térmicos</li>
-</ul>
+
+<div class="servicios">
+<div class="card">Mantenimiento de calderas</div>
+<div class="card">Inspección industrial</div>
+<div class="card">Reparación de equipos</div>
+</div>
 </section>
 
-<section id="ofertas" class="ofertas">
-<h2>🔥 Oferta</h2>
-<p>10% de descuento en mantenimiento este mes</p>
+<!-- TESTIMONIOS -->
+<section class="testimonios">
+<h2>Clientes</h2>
+<p>"Excelente servicio y rapidez" - Empresa XYZ</p>
+<p>"Muy confiables en mantenimiento" - Industria ABC</p>
 </section>
 
+<!-- CONTACTO -->
 <section id="contacto">
 <h2>Contacto</h2>
 <p>📞 0939397256</p>
@@ -186,10 +217,9 @@ footer {
 </section>
 
 <footer>
-<p>© 2026 PROVIDEC</p>
+<p>© PROVIDEC 2026</p>
 </footer>
 
-<!-- BOTÓN WHATSAPP -->
 <a href="https://wa.me/593939397256" class="whatsapp">💬</a>
 
 <!-- CARRITO -->
@@ -204,46 +234,37 @@ footer {
 </div>
 
 <script>
-let carrito = [];
-let total = 0;
+let carrito=[];let total=0;
 
-function agregarCarrito(nombre, precio) {
-  carrito.push({nombre, precio});
-  total += precio;
-  document.getElementById("contador").innerText = carrito.length;
+function agregarCarrito(n,p){
+  carrito.push({n,p});
+  total+=p;
+  document.getElementById("contador").innerText=carrito.length;
 }
 
-function verCarrito() {
-  let lista = document.getElementById("listaCarrito");
-  lista.innerHTML = "";
-
-  carrito.forEach(p => {
-    let li = document.createElement("li");
-    li.innerText = p.nombre + " - $" + p.precio;
-    lista.appendChild(li);
+function verCarrito(){
+  let l=document.getElementById("listaCarrito");
+  l.innerHTML="";
+  carrito.forEach(p=>{
+    let li=document.createElement("li");
+    li.innerText=p.n+" - $"+p.p;
+    l.appendChild(li);
   });
-
-  document.getElementById("total").innerText = total;
-  document.getElementById("carritoModal").style.display = "block";
+  document.getElementById("total").innerText=total;
+  document.getElementById("carritoModal").style.display="block";
 }
 
-function cerrarCarrito() {
-  document.getElementById("carritoModal").style.display = "none";
+function cerrarCarrito(){
+  document.getElementById("carritoModal").style.display="none";
 }
 
-function enviarWhatsApp() {
-  let mensaje = "Pedido:%0A";
-
-  carrito.forEach(p => {
-    mensaje += p.nombre + " - $" + p.precio + "%0A";
-  });
-
-  mensaje += "Total: $" + total;
-
-  window.open("https://wa.me/593939397256?text=" + mensaje);
+function enviarWhatsApp(){
+  let m="Pedido:%0A";
+  carrito.forEach(p=>{m+=p.n+" - $"+p.p+"%0A";});
+  m+="Total: $"+total;
+  window.open("https://wa.me/593939397256?text="+m);
 }
 </script>
 
 </body>
 </html>
-
