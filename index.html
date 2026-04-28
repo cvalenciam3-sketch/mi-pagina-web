@@ -3,140 +3,208 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi Negocio</title>
+<title>PROVIDEC S.A</title>
 
 <style>
-body {margin:0;font-family:'Segoe UI',Arial;background:#f4f6f9;scroll-behavior:smooth;}
-header {background:#002f6c;color:white;padding:15px 30px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;}
-nav a {color:white;margin:0 10px;text-decoration:none;font-weight:bold;}
-.hero {background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://via.placeholder.com/1400x500');background-size:cover;color:white;text-align:center;padding:120px 20px;}
-section {padding:60px 20px;max-width:1200px;margin:auto;}
-h2 {color:#002f6c;margin-bottom:20px;}
-.grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
-.card {background:white;padding:20px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);transition:.3s;}
-.card:hover {transform:translateY(-8px);}
-.timeline {border-left:4px solid #007BFF;padding-left:20px;}
-.indicators {display:flex;justify-content:space-around;flex-wrap:wrap;text-align:center;}
-.indicators h3 {color:#007BFF;font-size:32px;margin:0;}
-.brands {display:flex;justify-content:space-around;flex-wrap:wrap;gap:20px;}
-.brands div {background:white;padding:20px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}
-footer {background:#002f6c;color:white;text-align:center;padding:20px;}
-.whatsapp {position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;font-size:20px;text-decoration:none;}
-.fade {opacity:0;transform:translateY(30px);transition:1s;}
-.fade.show {opacity:1;transform:translateY(0);}
+body {
+  margin:0;
+  font-family: 'Segoe UI', Arial;
+  background:#f4f6f9;
+}
+
+/* HEADER */
+header {
+  background:#0d1b2a;
+  color:white;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav a {
+  color:white;
+  margin:0 12px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+  url('https://images.unsplash.com/photo-1581090700227-1e37b190418e');
+  background-size:cover;
+  color:white;
+  text-align:center;
+  padding:120px 20px;
+}
+
+.hero h1 {
+  font-size:40px;
+}
+
+.hero p {
+  font-size:18px;
+}
+
+/* SECCIONES */
+section {
+  padding:60px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+h2 {
+  color:#0d1b2a;
+  margin-bottom:20px;
+}
+
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* TARJETAS */
+.card {
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-5px);
+}
+
+/* INDICADORES */
+.indicators {
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  text-align:center;
+}
+
+.indicators h3 {
+  color:#0077b6;
+  font-size:30px;
+}
+
+/* FOOTER */
+footer {
+  background:#0d1b2a;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Mi Negocio</h1>
-<nav>
-<a href="#">Inicio</a>
-<a href="#empresa">Empresa</a>
-<a href="#areas">Áreas</a>
-<a href="#marcas">Marcas</a>
-<a href="#contacto">Contacto</a>
-</nav>
+  <h1>PROVIDEC S.A</h1>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#empresa">Empresa</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 </header>
 
 <div class="hero">
-<h2>Transformamos ideas en crecimiento real</h2>
-<p>Modelo empresarial inspirado en grandes corporaciones</p>
+  <h1>Donde la energía se vuelve confiable</h1>
+  <p>Soluciones industriales en mantenimiento, reparación y construcción</p>
 </div>
 
-<section id="empresa" class="fade">
-<h2>Quiénes somos</h2>
-<p>Somos una organización moderna enfocada en innovación, eficiencia y crecimiento sostenible, comprometida con nuestros clientes y la sociedad.</p>
+<section id="empresa">
+  <h2>Quiénes somos</h2>
+  <p>
+    PROVIDEC S.A es una empresa ecuatoriana especializada en mantenimiento,
+    reparación y construcción de equipos industriales, principalmente calderas.
+    Contamos con personal altamente capacitado y cobertura a nivel nacional.
+  </p>
 </section>
 
-<section class="fade">
-<h2>Nuestra Historia</h2>
-<div class="timeline">
-<div><strong>Inicio:</strong> Nacimos como emprendimiento.</div>
-<div><strong>Expansión:</strong> Crecimos en mercado y servicios.</div>
-<div><strong>Actualidad:</strong> Consolidación empresarial.</div>
-</div>
+<section>
+  <h2>Nuestra experiencia</h2>
+  <div class="indicators">
+    <div><h3>+10</h3><p>Años</p></div>
+    <div><h3>+200</h3><p>Clientes</p></div>
+    <div><h3>+500</h3><p>Servicios</p></div>
+  </div>
 </section>
 
-<section class="fade">
-<h2>Cultura Corporativa</h2>
-<div class="grid">
-<div class="card"><h3>Misión</h3><p>Generar valor con calidad.</p></div>
-<div class="card"><h3>Visión</h3><p>Ser líderes del mercado.</p></div>
-<div class="card"><h3>Valores</h3><p>Ética, innovación y compromiso.</p></div>
-</div>
+<section id="servicios">
+  <h2>Servicios</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Mantenimiento de calderas</h3>
+      <p>Preventivo y correctivo para garantizar seguridad y eficiencia.</p>
+    </div>
+
+    <div class="card">
+      <h3>Reparación industrial</h3>
+      <p>Soluciones técnicas especializadas en equipos industriales.</p>
+    </div>
+
+    <div class="card">
+      <h3>Construcción de calderas</h3>
+      <p>Diseño y fabricación de equipos industriales.</p>
+    </div>
+
+    <div class="card">
+      <h3>Soldadura especializada</h3>
+      <p>Trabajos certificados para alta exigencia industrial.</p>
+    </div>
+
+    <div class="card">
+      <h3>Sistemas eléctricos</h3>
+      <p>Control y seguridad en equipos industriales.</p>
+    </div>
+
+    <div class="card">
+      <h3>Venta de repuestos</h3>
+      <p>Repuestos industriales de alta calidad.</p>
+    </div>
+
+  </div>
 </section>
 
-<section class="fade">
-<h2>Indicadores</h2>
-<div class="indicators">
-<div><h3 id="c1">0</h3><p>Clientes</p></div>
-<div><h3 id="c2">0</h3><p>Proveedores</p></div>
-<div><h3 id="c3">0</h3><p>Proyectos</p></div>
-</div>
+<section>
+  <h2>Compromiso</h2>
+  <p>
+    Garantizamos asistencia técnica antes, durante y después de cada servicio,
+    asegurando continuidad operativa y satisfacción del cliente.
+  </p>
 </section>
 
-<section id="areas" class="fade">
-<h2>Áreas de negocio</h2>
-<div class="grid">
-<div class="card"><h3>Comercial</h3><p>Ventas estratégicas.</p></div>
-<div class="card"><h3>Operaciones</h3><p>Gestión eficiente.</p></div>
-<div class="card"><h3>Logística</h3><p>Distribución.</p></div>
-</div>
-</section>
-
-<section id="marcas" class="fade">
-<h2>Nuestras marcas</h2>
-<div class="brands">
-<div>Marca 1</div>
-<div>Marca 2</div>
-<div>Marca 3</div>
-</div>
-</section>
-
-<section class="fade">
-<h2>Sostenibilidad</h2>
-<p>Comprometidos con el desarrollo social, ambiental y económico.</p>
-</section>
-
-<section id="contacto" class="fade">
-<h2>Contacto</h2>
-<p>Email: contacto@minegocio.com</p>
-<p>Tel: 099999999</p>
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p>Email: providec@email.com</p>
+  <p>Teléfono: 099999999</p>
 </section>
 
 <footer>
-<p>© 2026 Mi Negocio</p>
+  <p>© 2026 PROVIDEC S.A</p>
 </footer>
 
 <a class="whatsapp" href="https://wa.me/593999999999" target="_blank">💬</a>
-
-<script>
-// Animaciones scroll
-const faders = document.querySelectorAll('.fade');
-window.addEventListener('scroll', () => {
-  faders.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100){ el.classList.add('show'); }
-  });
-});
-
-// Contadores animados
-function counter(id, max){
-  let i=0;
-  let el=document.getElementById(id);
-  let interval=setInterval(()=>{
-    i+=Math.ceil(max/50);
-    if(i>=max){i=max;clearInterval(interval);} 
-    el.innerText=i+'+';
-  },40);
-}
-
-counter('c1',1000);
-counter('c2',100);
-counter('c3',50);
-</script>
 
 </body>
 </html>
