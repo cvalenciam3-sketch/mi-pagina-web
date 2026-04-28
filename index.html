@@ -3,161 +3,222 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi Negocio</title>
-
+<title>PROVIDEC S.A | Donde la energía se vuelve confiable</title>
 <style>
-body {margin:0;font-family:'Segoe UI',Arial;background:#f4f6f9;scroll-behavior:smooth;}
-header {background:#002f6c;color:white;padding:15px 30px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;}
-nav a {color:white;margin:0 10px;text-decoration:none;font-weight:bold;}
-.hero {background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://via.placeholder.com/1400x500');background-size:cover;color:white;text-align:center;padding:120px 20px;}
-section {padding:60px 20px;max-width:1200px;margin:auto;}
-h2 {color:#002f6c;margin-bottom:20px;}
-.grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
-.card {background:white;padding:20px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);transition:.3s;}
-.card:hover {transform:translateY(-8px);}
-.timeline {border-left:4px solid #007BFF;padding-left:20px;}
-.indicators {display:flex;justify-content:space-around;flex-wrap:wrap;text-align:center;}
-.indicators h3 {color:#007BFF;font-size:32px;margin:0;}
-.brands {display:flex;justify-content:space-around;flex-wrap:wrap;gap:20px;}
-.brands div {background:white;padding:20px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}
-footer {background:#002f6c;color:white;text-align:center;padding:20px;}
-.whatsapp {position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;font-size:20px;text-decoration:none;}
-.fade {opacity:0;transform:translateY(30px);transition:1s;}
-.fade.show {opacity:1;transform:translateY(0);}
+:root{
+  --azul:#003b73;
+  --azul-oscuro:#071b2f;
+  --celeste:#009fe3;
+  --rojo:#d71920;
+  --gris:#f3f5f7;
+  --acero:#5f6f7a;
+  --blanco:#fff;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:var(--gris);color:#1d2935;scroll-behavior:smooth;}
+a{text-decoration:none;color:inherit}
+.topbar{background:var(--rojo);color:white;font-size:13px;padding:8px 30px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.topbar span{margin-right:18px;font-weight:600}
+header{background:var(--azul-oscuro);color:white;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;position:sticky;top:0;z-index:1000;box-shadow:0 4px 15px rgba(0,0,0,.25)}
+.logo{display:flex;align-items:center;gap:12px;font-weight:900;font-size:27px;letter-spacing:1px}
+.logo-mark{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--rojo),#ff7b00);display:grid;place-items:center;font-weight:900}
+nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+nav a{font-weight:700;font-size:14px;text-transform:uppercase;opacity:.95}
+nav a:hover{color:#ffcc00}
+.hero{min-height:560px;background:linear-gradient(rgba(0,24,48,.70),rgba(0,24,48,.80)),url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1600&q=80') center/cover;color:white;display:flex;align-items:center;justify-content:center;text-align:center;padding:70px 20px;position:relative}
+.hero-content{max-width:960px}.hero small{background:var(--rojo);padding:8px 18px;border-radius:30px;font-weight:800;text-transform:uppercase;letter-spacing:1px}.hero h1{font-size:58px;line-height:1.05;margin:25px 0 15px;text-transform:uppercase}.hero p{font-size:21px;max-width:780px;margin:0 auto 30px}.btns{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}.btn{padding:14px 25px;border-radius:4px;font-weight:800;text-transform:uppercase}.btn-primary{background:var(--rojo);color:white}.btn-secondary{background:white;color:var(--azul-oscuro)}
+.quick-links{background:var(--azul);color:white;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));max-width:1180px;margin:-45px auto 0;position:relative;z-index:3;border-radius:10px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.25)}.quick-links a{padding:25px;text-align:center;font-weight:800;border-right:1px solid rgba(255,255,255,.2)}.quick-links a:hover{background:var(--rojo)}
+section{padding:75px 25px;max-width:1220px;margin:auto}.section-title{text-align:center;margin-bottom:45px}.section-title small{color:var(--rojo);font-weight:900;text-transform:uppercase;letter-spacing:1.5px}.section-title h2{font-size:38px;color:var(--azul-oscuro);margin:8px 0}.section-title p{max-width:760px;margin:auto;color:#52616d;font-size:17px}.split{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}.split img{width:100%;border-radius:16px;box-shadow:0 12px 30px rgba(0,0,0,.18)}.highlight{color:var(--rojo);font-weight:900}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}.card{background:white;border-radius:16px;padding:28px;box-shadow:0 8px 24px rgba(0,0,0,.10);transition:.3s;border-top:5px solid var(--celeste)}.card:hover{transform:translateY(-8px);box-shadow:0 14px 34px rgba(0,0,0,.16)}.card h3{color:var(--azul-oscuro);margin-top:0;font-size:22px}.card p{color:#52616d;line-height:1.6}.dark-section{background:linear-gradient(135deg,var(--azul-oscuro),var(--azul));max-width:none;color:white}.dark-section .section-title h2,.dark-section .section-title p{color:white}.indicators{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:25px;max-width:1100px;margin:auto}.indicator{text-align:center;background:rgba(255,255,255,.10);padding:32px 20px;border-radius:14px;border:1px solid rgba(255,255,255,.18)}.indicator h3{font-size:42px;margin:0;color:#ffcc00}.indicator p{font-weight:800;text-transform:uppercase}.products .card{padding:0;overflow:hidden;border-top:none}.products img{width:100%;height:190px;object-fit:cover}.products .content{padding:24px}.banner{background:linear-gradient(rgba(215,25,32,.88),rgba(215,25,32,.88)),url('https://images.unsplash.com/photo-1565608438257-fac3c27beb36?auto=format&fit=crop&w=1600&q=80') center/cover;color:white;text-align:center;max-width:none}.banner h2{font-size:42px;margin:0 0 12px}.values{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}.value{background:white;padding:28px;border-radius:14px;text-align:center;border-bottom:5px solid var(--rojo);box-shadow:0 7px 20px rgba(0,0,0,.10)}.value h3{color:var(--azul);text-transform:uppercase}.contact-box{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}.contact-card{background:white;padding:28px;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.10)}.contact-card a{color:var(--rojo);font-weight:900}.footer{background:#061423;color:white;padding:55px 30px 20px}.footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}.footer h3{color:#ffcc00}.footer a{display:block;margin:8px 0;color:#d9e3ea}.copy{text-align:center;border-top:1px solid rgba(255,255,255,.15);margin-top:35px;padding-top:18px;color:#b8c7d1}.whatsapp{position:fixed;bottom:22px;right:22px;background:#25D366;color:white;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:25px;z-index:2000;box-shadow:0 8px 20px rgba(0,0,0,.25)}.fade{opacity:0;transform:translateY(28px);transition:1s}.fade.show{opacity:1;transform:translateY(0)}
+@media(max-width:850px){header{flex-direction:column;gap:15px}nav{justify-content:center}.hero h1{font-size:38px}.split{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.quick-links{margin:0;border-radius:0}.topbar{justify-content:center;text-align:center}}
 </style>
 </head>
-
 <body>
 
+<div class="topbar">
+  <div><span>📞 0960280612</span><span>✉ providec26@gmail.com</span></div>
+  <div><span>Servicio técnico nacional</span><span>Asistencia industrial 24/7</span></div>
+</div>
+
 <header>
-<h1>Mi Negocio</h1>
-<nav>
-<a href="#">Inicio</a>
-<a href="#empresa">Empresa</a>
-<a href="#areas">Áreas</a>
-<a href="#marcas">Marcas</a>
-<a href="#contacto">Contacto</a>
-</nav>
+  <a href="#" class="logo"><div class="logo-mark">P</div><div>PROVIDEC</div></a>
+  <nav>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#productos">Productos</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#sostenibilidad">Sostenibilidad</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 </header>
 
 <div class="hero">
-<h2>Transformamos ideas en crecimiento real</h2>
-<p>Modelo empresarial inspirado en grandes corporaciones</p>
+  <div class="hero-content">
+    <small>Industria • Energía • Calderas</small>
+    <h1>Donde la energía se vuelve confiable</h1>
+    <p>Soluciones técnicas para mantenimiento, reparación, construcción de calderas, repuestos industriales y sistemas de control.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="#servicios">Ver servicios</a>
+      <a class="btn btn-secondary" href="https://wa.me/593960280612?text=Hola%20PROVIDEC,%20quiero%20información%20sobre%20sus%20servicios%20industriales" target="_blank">Solicitar asesoría</a>
+    </div>
+  </div>
 </div>
 
-<section id="empresa" class="fade">
-<h2>Quiénes somos</h2>
-<p>Somos una organización moderna enfocada en innovación, eficiencia y crecimiento sostenible, comprometida con nuestros clientes y la sociedad.</p>
+<div class="quick-links">
+  <a href="#servicios">Mantenimiento</a>
+  <a href="#productos">Repuestos</a>
+  <a href="#proyectos">Proyectos</a>
+  <a href="#contacto">Cotización</a>
+</div>
+
+<section id="nosotros" class="fade">
+  <div class="section-title">
+    <small>¿Quiénes somos?</small>
+    <h2>PROVIDEC S.A</h2>
+    <p>Empresa ecuatoriana especializada en mantenimiento, reparación y construcción de equipos industriales, principalmente calderas.</p>
+  </div>
+  <div class="split">
+    <div>
+      <h2>Soluciones eficientes, seguras y adaptadas a cada cliente</h2>
+      <p>Contamos con personal técnico capacitado y experiencia en el sector industrial. Nuestra capacidad operativa, técnica y logística nos permite brindar atención en cualquier punto del país, garantizando rapidez, calidad y continuidad en los procesos productivos.</p>
+      <p><span class="highlight">Nuestro compromiso:</span> asistencia técnica permanente antes, durante y después de cada servicio.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1581092335397-9fa3411087a7?auto=format&fit=crop&w=900&q=80" alt="Técnicos industriales trabajando">
+  </div>
+</section>
+
+<section class="dark-section fade">
+  <div class="section-title">
+    <small>Indicadores</small>
+    <h2>Capacidad técnica y operativa</h2>
+    <p>Datos referenciales para presentar la proyección empresarial de PROVIDEC.</p>
+  </div>
+  <div class="indicators">
+    <div class="indicator"><h3 id="c1">0</h3><p>Servicios técnicos</p></div>
+    <div class="indicator"><h3 id="c2">0</h3><p>Clientes industriales</p></div>
+    <div class="indicator"><h3 id="c3">0</h3><p>Cobertura nacional</p></div>
+    <div class="indicator"><h3 id="c4">0</h3><p>Áreas especializadas</p></div>
+  </div>
+</section>
+
+<section id="servicios" class="fade">
+  <div class="section-title">
+    <small>Portafolio técnico</small>
+    <h2>Servicios principales</h2>
+    <p>Atendemos necesidades industriales con enfoque en seguridad, eficiencia energética y continuidad operativa.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Mantenimiento de calderas</h3><p>Servicio preventivo y correctivo para asegurar funcionamiento continuo, seguro y eficiente.</p></div>
+    <div class="card"><h3>Reparación de equipos industriales</h3><p>Diagnóstico, intervención técnica y recuperación de equipos usados en procesos productivos.</p></div>
+    <div class="card"><h3>Construcción de calderas</h3><p>Fabricación y adecuación de equipos según requerimientos técnicos del cliente.</p></div>
+    <div class="card"><h3>Soldadura especializada</h3><p>Procesos de soldadura industrial para estructuras, tuberías, calderas y componentes críticos.</p></div>
+    <div class="card"><h3>Sistemas eléctricos y control</h3><p>Instalación, revisión y mantenimiento de sistemas de seguridad, control y automatización.</p></div>
+    <div class="card"><h3>Asistencia técnica nacional</h3><p>Atención antes, durante y después del servicio, con respuesta rápida a nivel nacional.</p></div>
+  </div>
+</section>
+
+<section id="productos" class="products fade">
+  <div class="section-title">
+    <small>Productos industriales</small>
+    <h2>Repuestos y soluciones</h2>
+    <p>Componentes y soluciones para equipos industriales, calderas y sistemas técnicos.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80"><div class="content"><h3>Repuestos industriales</h3><p>Partes, accesorios y componentes para mantenimiento operativo.</p></div></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=80"><div class="content"><h3>Componentes para calderas</h3><p>Soluciones para reparación, seguridad y rendimiento térmico.</p></div></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=900&q=80"><div class="content"><h3>Tableros y control</h3><p>Sistemas eléctricos, control industrial y seguridad operacional.</p></div></div>
+  </div>
+</section>
+
+<section class="banner fade">
+  <h2>PROVIDEC tiene la solución industrial que tu empresa necesita</h2>
+  <p>Mantenimiento, construcción, reparación y soporte técnico especializado.</p>
+  <br><a class="btn btn-secondary" href="#contacto">Contactar ahora</a>
 </section>
 
 <section class="fade">
-<h2>Nuestra Historia</h2>
-<div class="timeline">
-<div><strong>Inicio:</strong> Nacimos como emprendimiento.</div>
-<div><strong>Expansión:</strong> Crecimos en mercado y servicios.</div>
-<div><strong>Actualidad:</strong> Consolidación empresarial.</div>
-</div>
+  <div class="section-title">
+    <small>Cultura corporativa</small>
+    <h2>Misión, visión y valores</h2>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Misión</h3><p>Brindar soluciones técnicas industriales confiables, seguras y eficientes, asegurando continuidad en los procesos productivos de nuestros clientes.</p></div>
+    <div class="card"><h3>Visión</h3><p>Ser una empresa referente en Ecuador en mantenimiento, construcción y reparación de calderas y equipos industriales.</p></div>
+    <div class="card"><h3>Propósito</h3><p>Convertir la energía industrial en productividad confiable para el desarrollo de nuestros clientes.</p></div>
+  </div>
 </section>
 
 <section class="fade">
-<h2>Cultura Corporativa</h2>
-<div class="grid">
-<div class="card"><h3>Misión</h3><p>Generar valor con calidad.</p></div>
-<div class="card"><h3>Visión</h3><p>Ser líderes del mercado.</p></div>
-<div class="card"><h3>Valores</h3><p>Ética, innovación y compromiso.</p></div>
-</div>
+  <div class="section-title"><small>Valores</small><h2>Principios que guían nuestro trabajo</h2></div>
+  <div class="values">
+    <div class="value"><h3>Seguridad</h3><p>Trabajamos cuidando a las personas y equipos.</p></div>
+    <div class="value"><h3>Calidad</h3><p>Aplicamos soluciones técnicas responsables.</p></div>
+    <div class="value"><h3>Rapidez</h3><p>Respondemos con eficiencia ante necesidades críticas.</p></div>
+    <div class="value"><h3>Compromiso</h3><p>Acompañamos al cliente antes, durante y después.</p></div>
+    <div class="value"><h3>Innovación</h3><p>Mejoramos procesos técnicos y operativos.</p></div>
+  </div>
 </section>
 
-<section class="fade">
-<h2>Indicadores</h2>
-<div class="indicators">
-<div><h3 id="c1">0</h3><p>Clientes</p></div>
-<div><h3 id="c2">0</h3><p>Proveedores</p></div>
-<div><h3 id="c3">0</h3><p>Proyectos</p></div>
-</div>
+<section id="proyectos" class="products fade">
+  <div class="section-title">
+    <small>Experiencia aplicada</small>
+    <h2>Proyectos y aplicaciones</h2>
+    <p>Soluciones para industrias que requieren continuidad, seguridad y eficiencia en sus equipos.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=900&q=80"><div class="content"><h3>Plantas industriales</h3><p>Mantenimiento integral de equipos críticos.</p></div></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1533630160910-65f5a1718c65?auto=format&fit=crop&w=900&q=80"><div class="content"><h3>Calderas y vapor</h3><p>Construcción, reparación y optimización.</p></div></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1581093458791-9d15482442f6?auto=format&fit=crop&w=900&q=80"><div class="content"><h3>Soldadura técnica</h3><p>Intervención en estructuras y componentes metálicos.</p></div></div>
+  </div>
 </section>
 
-<section id="areas" class="fade">
-<h2>Áreas de negocio</h2>
-<div class="grid">
-<div class="card"><h3>Comercial</h3><p>Ventas estratégicas.</p></div>
-<div class="card"><h3>Operaciones</h3><p>Gestión eficiente.</p></div>
-<div class="card"><h3>Logística</h3><p>Distribución.</p></div>
-</div>
-</section>
-
-<section id="marcas" class="fade">
-<h2>Nuestras marcas</h2>
-<div class="brands">
-<div>Marca 1</div>
-<div>Marca 2</div>
-<div>Marca 3</div>
-</div>
-</section>
-
-<section class="fade">
-<h2>Sostenibilidad</h2>
-<p>Comprometidos con el desarrollo social, ambiental y económico.</p>
+<section id="sostenibilidad" class="fade">
+  <div class="section-title">
+    <small>Gestión responsable</small>
+    <h2>Sostenibilidad y seguridad industrial</h2>
+    <p>Promovemos servicios técnicos responsables, priorizando seguridad, eficiencia, reducción de riesgos y continuidad productiva.</p>
+  </div>
+  <div class="split">
+    <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=900&q=80" alt="Industria sostenible">
+    <div>
+      <h2>Compromiso con la industria ecuatoriana</h2>
+      <p>PROVIDEC trabaja con enfoque técnico, responsable y preventivo, ayudando a las empresas a reducir fallas, mejorar la seguridad de sus equipos y mantener sus operaciones activas.</p>
+      <p>Nuestro modelo se basa en la confianza, la capacidad técnica y la atención permanente.</p>
+    </div>
+  </div>
 </section>
 
 <section id="contacto" class="fade">
-<h2>Contacto</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>📧 Correo</h3>
-<p>providec26@gmail.com</p>
-<a href="mailto:providec26@gmail.com">Enviar correo</a>
-</div>
-
-<div class="card">
-<h3>📱 WhatsApp</h3>
-<p>0960280612</p>
-<a href="https://wa.me/593960280612" target="_blank">Escríbenos</a>
-</div>
-
-<div class="card">
-<h3>📍 Ubicación</h3>
-<p>Ecuador</p>
-<iframe src="https://www.google.com/maps?q=Ecuador&output=embed" width="100%" height="150" style="border:0;border-radius:10px;"></iframe>
-</div>
-
-</div>
-
+  <div class="section-title">
+    <small>Contáctanos</small>
+    <h2>Solicita asesoría técnica</h2>
+    <p>Comunícate con PROVIDEC para mantenimiento, reparación, construcción de calderas o venta de repuestos industriales.</p>
+  </div>
+  <div class="contact-box">
+    <div class="contact-card"><h3>📧 Correo</h3><p>providec26@gmail.com</p><a href="mailto:providec26@gmail.com">Enviar correo</a></div>
+    <div class="contact-card"><h3>📱 WhatsApp</h3><p>0960280612</p><a href="https://wa.me/593960280612?text=Hola%20PROVIDEC,%20quiero%20información%20sobre%20sus%20servicios" target="_blank">Escribir por WhatsApp</a></div>
+    <div class="contact-card"><h3>📍 Cobertura</h3><p>Servicio técnico a nivel nacional en Ecuador.</p><iframe src="https://www.google.com/maps?q=Ecuador&output=embed" width="100%" height="150" style="border:0;border-radius:10px;"></iframe></div>
+  </div>
 </section>
 
-<footer>
-<p>© 2026 Mi Negocio</p>
+<footer class="footer">
+  <div class="footer-grid">
+    <div><h3>PROVIDEC S.A</h3><p>“Donde la energía se vuelve confiable”</p><p>Empresa ecuatoriana especializada en mantenimiento, reparación y construcción de equipos industriales.</p></div>
+    <div><h3>Empresa</h3><a href="#nosotros">Nosotros</a><a href="#proyectos">Proyectos</a><a href="#sostenibilidad">Sostenibilidad</a></div>
+    <div><h3>Servicios</h3><a href="#servicios">Calderas</a><a href="#servicios">Soldadura</a><a href="#productos">Repuestos</a></div>
+    <div><h3>Contacto</h3><a href="mailto:providec26@gmail.com">providec26@gmail.com</a><a href="https://wa.me/593960280612" target="_blank">0960280612</a></div>
+  </div>
+  <div class="copy">© 2026 PROVIDEC S.A. Todos los derechos reservados.</div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/593960280612" target="_blank">💬</a>
+<a class="whatsapp" href="https://wa.me/593960280612?text=Hola%20PROVIDEC,%20necesito%20asesoría%20técnica" target="_blank">💬</a>
 
 <script>
-// Animaciones scroll
-const faders = document.querySelectorAll('.fade');
-window.addEventListener('scroll', () => {
-  faders.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100){ el.classList.add('show'); }
-  });
-});
-
-// Contadores animados
-function counter(id, max){
-  let i=0;
-  let el=document.getElementById(id);
-  let interval=setInterval(()=>{
-    i+=Math.ceil(max/50);
-    if(i>=max){i=max;clearInterval(interval);} 
-    el.innerText=i+'+';
-  },40);
-}
-
-counter('c1',1000);
-counter('c2',100);
-counter('c3',50);
+const faders=document.querySelectorAll('.fade');
+function reveal(){faders.forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight-90){el.classList.add('show')}})}
+window.addEventListener('scroll',reveal);reveal();
+function counter(id,max,sufijo=''){let i=0,el=document.getElementById(id);let interval=setInterval(()=>{i+=Math.ceil(max/45);if(i>=max){i=max;clearInterval(interval)}el.innerText=i+sufijo},35)}
+counter('c1',500,'+');counter('c2',80,'+');counter('c3',24,'/7');counter('c4',6,'+');
 </script>
 
 </body>
-</html>
+</
