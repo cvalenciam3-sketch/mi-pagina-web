@@ -3,155 +3,301 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PROVIDEC S.A</title>
-
+<title>PROVIDEC S.A | Energía confiable para la industria</title>
 <style>
-body{
-  margin:0;
-  font-family:Arial;
-  background:#f4f6f8;
-  color:#333;
+:root{
+  --negro:#05070a;
+  --negro-suave:#101820;
+  --azul:#0e5f85;
+  --azul-suave:#e9f5fb;
+  --azul-medio:#2f8fbd;
+  --naranja:#f47b20;
+  --naranja-claro:#ffb36b;
+  --gris:#f5f7fa;
+  --texto:#26323f;
+  --blanco:#ffffff;
 }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--gris);color:var(--texto)}
+a{text-decoration:none;color:inherit}
+.topbar{background:linear-gradient(90deg,var(--negro),var(--azul));color:white;padding:9px 6%;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:14px;font-weight:700}
+header{background:white;position:sticky;top:0;z-index:1000;box-shadow:0 5px 20px rgba(0,0,0,.10)}
+.navbar{max-width:1250px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:13px 24px;gap:20px}
+.logo{display:flex;align-items:center;gap:14px}
+.logo img{height:82px;width:auto;border-radius:8px;background:#000;padding:4px}
+.logo-text strong{display:block;font-size:27px;color:var(--negro);letter-spacing:1px}
+.logo-text span{font-size:12px;color:var(--azul);font-weight:800;text-transform:uppercase}
+nav{display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:center}
+nav a{font-weight:800;color:var(--negro-suave);text-transform:uppercase;font-size:14px;position:relative}
+nav a:hover{color:var(--naranja)}
+.cta{background:var(--naranja);color:white!important;padding:13px 20px;border-radius:30px;box-shadow:0 8px 20px rgba(244,123,32,.35)}
 
-/* HEADER */
-header{
-  background:white;
-  padding:15px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
+.hero{min-height:620px;background:linear-gradient(115deg,rgba(5,7,10,.94),rgba(14,95,133,.83),rgba(244,123,32,.22)),url('https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1800&q=80') center/cover;display:flex;align-items:center;color:white}
+.hero-inner{max-width:1250px;margin:auto;padding:80px 6%;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.badge{display:inline-block;background:rgba(244,123,32,.95);padding:10px 18px;border-radius:40px;font-weight:900;text-transform:uppercase;letter-spacing:1px;margin-bottom:22px}
+.hero h1{font-size:58px;line-height:1.05;margin-bottom:22px;text-transform:uppercase}
+.hero h1 span{color:var(--naranja-claro)}
+.hero p{font-size:20px;line-height:1.7;color:#edf7fb;margin-bottom:28px;max-width:680px}
+.buttons{display:flex;gap:15px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 24px;border-radius:8px;font-weight:900;text-transform:uppercase}
+.btn-orange{background:var(--naranja);color:white}
+.btn-light{background:white;color:var(--azul)}
+.hero-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(6px);border-radius:22px;padding:26px;box-shadow:0 20px 45px rgba(0,0,0,.25)}
+.hero-card img{width:100%;border-radius:16px;background:#000;padding:12px;margin-bottom:18px}
+.hero-card h3{font-size:26px;margin-bottom:10px}
+.hero-card p{font-size:16px;margin:0;color:#eaf5f9}
 
-header img{
-  height:70px;
-}
+.quick{max-width:1150px;margin:-50px auto 0;position:relative;z-index:5;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));background:white;border-radius:18px;overflow:hidden;box-shadow:0 16px 35px rgba(0,0,0,.16)}
+.quick a{padding:25px;text-align:center;font-weight:900;color:var(--negro-suave);border-right:1px solid #e6edf2}
+.quick a:hover{background:var(--naranja);color:white}
 
-nav a{
-  margin:0 10px;
-  text-decoration:none;
-  color:#004f8b;
-  font-weight:bold;
-}
+section{padding:85px 6%}
+.container{max-width:1250px;margin:auto}
+.title{text-align:center;margin-bottom:48px}
+.title small{color:var(--naranja);font-weight:900;text-transform:uppercase;letter-spacing:1.5px}
+.title h2{font-size:42px;color:var(--negro-suave);margin-top:8px}
+.title p{max-width:780px;margin:14px auto 0;color:#63717e;line-height:1.7;font-size:18px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.panel{background:white;border-radius:22px;padding:34px;box-shadow:0 10px 30px rgba(0,0,0,.10);border-top:6px solid var(--naranja)}
+.panel h3{font-size:34px;color:var(--azul);margin-bottom:16px}
+.panel p{line-height:1.8;color:#53616e;margin-bottom:15px;font-size:17px}
+.image-box{height:430px;border-radius:22px;background:center/cover;box-shadow:0 18px 40px rgba(0,0,0,.18)}
 
-/* HERO */
-.hero{
-  background:linear-gradient(rgba(0,79,139,0.8),rgba(0,79,139,0.8)),
-  url('https://images.unsplash.com/photo-1581093458791-9d15482442f6?auto=format&fit=crop&w=1600&q=80');
-  background-size:cover;
-  color:white;
-  text-align:center;
-  padding:80px 20px;
-}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);transition:.3s;border-bottom:5px solid var(--azul-medio)}
+.card:hover{transform:translateY(-8px)}
+.card-img{height:185px;background:center/cover}
+.card-body{padding:24px}
+.icon{width:58px;height:58px;border-radius:15px;background:var(--azul-suave);color:var(--naranja);display:grid;place-items:center;font-size:30px;margin-bottom:14px}
+.card h3{color:var(--negro-suave);font-size:22px;margin-bottom:10px;text-transform:uppercase}
+.card p{color:#5e6c78;line-height:1.6}
 
-.hero h1{
-  font-size:40px;
-}
+.band{background:linear-gradient(135deg,var(--azul),#7fc8e8);color:white}
+.band .title h2,.band .title p{color:white}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px}
+.stat{background:rgba(255,255,255,.16);padding:30px;text-align:center;border-radius:20px;border:1px solid rgba(255,255,255,.20)}
+.stat h3{font-size:42px;color:#fff1d7}
+.stat p{font-weight:800;text-transform:uppercase;margin-top:8px}
 
-.hero p{
-  font-size:18px;
-}
+.video{background:var(--azul-suave)}
+.video-box{height:420px;border-radius:24px;overflow:hidden;background:linear-gradient(rgba(5,7,10,.30),rgba(5,7,10,.75)),url('https://images.unsplash.com/photo-1565608438257-fac3c27beb36?auto=format&fit=crop&w=1600&q=80') center/cover;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 18px 45px rgba(0,0,0,.20)}
+.play{width:92px;height:92px;border-radius:50%;background:var(--naranja);display:grid;place-items:center;color:white;font-size:40px;box-shadow:0 0 0 18px rgba(244,123,32,.25)}
+.video-text{position:absolute;bottom:35px;left:35px;right:35px;color:white}
+.video-text h3{font-size:32px;margin-bottom:8px}
+.progress{height:8px;background:rgba(255,255,255,.32);border-radius:20px;margin-top:16px;overflow:hidden}
+.progress span{display:block;height:100%;background:var(--naranja-claro);animation:load 30s linear infinite}
+@keyframes load{from{width:0}to{width:100%}}
 
-/* SECCIONES */
-.section{
-  padding:60px 20px;
-  text-align:center;
-}
+.values{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+.value{background:white;padding:28px;border-radius:18px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.08);border-top:5px solid var(--naranja)}
+.value h3{color:var(--azul);margin-bottom:10px;text-transform:uppercase}
+.value p{color:#60707d;line-height:1.6}
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-  margin-top:30px;
-}
+.contact{background:white}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.contact-card{background:var(--gris);padding:25px;border-radius:18px;margin-bottom:18px;border-left:6px solid var(--naranja)}
+.contact-card h3{color:var(--azul);margin-bottom:8px}
+.contact-card a{color:var(--naranja);font-weight:900}
+.form{background:linear-gradient(135deg,var(--negro-suave),var(--azul));padding:30px;border-radius:22px}
+.form input,.form textarea{width:100%;padding:15px;margin-bottom:14px;border:none;border-radius:10px}
+.form button{border:none;width:100%;cursor:pointer}
 
-.card{
-  background:white;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* VIDEO */
-.video-box{
-  height:300px;
-  background:url('https://images.unsplash.com/photo-1565608438257-fac3c27beb36?auto=format&fit=crop&w=1600&q=80');
-  background-size:cover;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
-  font-size:30px;
-  margin-top:20px;
-}
-
-/* WHATSAPP */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  width:70px;
-  height:70px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:35px;
+footer{background:var(--negro);color:white;padding:50px 6% 22px}
+.footer-grid{max-width:1250px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+footer img{height:90px;background:#000;border-radius:8px;margin-bottom:12px}
+footer h3{color:var(--naranja-claro);margin-bottom:12px}
+footer p,footer a{display:block;color:#d8e5ec;margin:7px 0;line-height:1.6}
+.copy{text-align:center;color:#9baab4;border-top:1px solid rgba(255,255,255,.12);padding-top:18px;margin-top:30px}
+.whatsapp{position:fixed;right:22px;bottom:22px;width:82px;height:82px;border-radius:50%;background:#25D366;color:white;display:grid;place-items:center;font-size:40px;z-index:3000;box-shadow:0 12px 30px rgba(0,0,0,.30);animation:pulse 1.7s infinite}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
+@media(max-width:900px){
+  .navbar,.topbar{flex-direction:column;text-align:center}
+  nav{gap:12px}
+  .hero-inner,.split,.contact-grid,.footer-grid{grid-template-columns:1fr}
+  .hero h1{font-size:40px}
+  .logo img{height:70px}
+  .whatsapp{width:68px;height:68px;font-size:32px}
 }
 </style>
-
 </head>
-
 <body>
+<div class="topbar">
+  <div>📍 Ecuador | ✉ providec26@gmail.com</div>
+  <div>📞 0960280612 | Atención técnica industrial</div>
+</div>
 
 <header>
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...REEMPLAZADO...">
-  <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Servicios</a>
-    <a href="#">Nosotros</a>
-    <a href="#">Contacto</a>
-  </nav>
+  <div class="navbar">
+    <a class="logo" href="#">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUGBggHCA8ICAgPHhERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERH/wAARCAD6AYQDAREAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAAAAECAwQFBgcI/8QAPBAAAgIBAwMDAgMFBgQHAAAAAAECEQADBBIhMQVBUWEGInGBkTKhEzLB0QcUI1JicsIVQ1OSovD/xAAZAQADAQEBAAAAAAAAAAAAAAABAgMABAX/xAAiEQACAgICAgMBAQAAAAAAAAAAAQIRAyESMQQiQTJRYXH/2gAMAwEAAhEDEQA/APj62mwmj0p//2Q==" alt="Logo PROVIDEC">
+      <div class="logo-text"><strong>PROVIDEC</strong><span>Donde la energía se vuelve confiable</span></div>
+    </a>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#video">Video</a>
+      <a href="#contacto" class="cta">Cotizar</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
-  <h1>PROVIDEC S.A</h1>
-  <p>Donde la energía se vuelve confiable</p>
-</section>
-
-<section class="section">
-  <h2>Servicios</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Calderas</h3>
-      <p>Mantenimiento y reparación</p>
+  <div class="hero-inner">
+    <div>
+      <span class="badge">Soluciones industriales</span>
+      <h1>Energía confiable para <span>procesos productivos</span></h1>
+      <p>Mantenimiento, reparación y construcción de calderas, soldadura especializada, sistemas eléctricos y venta de repuestos industriales.</p>
+      <div class="buttons">
+        <a class="btn btn-orange" href="#servicios">Ver servicios</a>
+        <a class="btn btn-light" href="https://wa.me/593960280612" target="_blank">Hablar con un técnico</a>
+      </div>
     </div>
-    <div class="card">
-      <h3>Soldadura</h3>
-      <p>Servicios especializados</p>
-    </div>
-    <div class="card">
-      <h3>Repuestos</h3>
-      <p>Venta industrial</p>
+    <div class="hero-card">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUGBggHCA8ICAgPHhERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERH/wAARCAD6AYQDAREAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAAAAECAwQFBgcI/8QAPBAAAgIBAwMDAgMFBgQHAAAAAAECEQADBBIhMQVBUWEGInGBkTKhEzLB0QcUI1JicsIVQ1OSovD/xAAZAQADAQEBAAAAAAAAAAAAAAABAgMABAX/xAAiEQACAgICAgMBAQAAAAAAAAAAAQIRAyESMQQiQTJRYXH/2gAMAwEAAhEDEQA/APj62mwmj0p//2Q==" alt="PROVIDEC logo">
+      <h3>PROVIDEC S.A</h3>
+      <p>Servicio técnico industrial con cobertura nacional y atención personalizada.</p>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <h2>Video corporativo</h2>
-  <div class="video-box">
-    ▶ Video PROVIDEC
+<div class="quick">
+  <a href="#servicios">Calderas</a>
+  <a href="#servicios">Soldadura</a>
+  <a href="#servicios">Repuestos</a>
+  <a href="#video">Video</a>
+  <a href="#contacto">Contacto</a>
+</div>
+
+<section id="nosotros">
+  <div class="container split">
+    <div class="panel">
+      <h3>Empresa técnica ecuatoriana</h3>
+      <p>PROVIDEC S.A es una empresa especializada en mantenimiento, reparación y construcción de equipos industriales, principalmente calderas.</p>
+      <p>Contamos con personal técnico capacitado para ofrecer soluciones eficientes, seguras y adaptadas a las necesidades de cada cliente.</p>
+      <p>Nuestra capacidad operativa, técnica y logística nos permite brindar atención en cualquier punto del país.</p>
+    </div>
+    <div class="image-box" style="background-image:url('https://images.unsplash.com/photo-1581092335397-9fa3411087a7?auto=format&fit=crop&w=1100&q=80')"></div>
   </div>
 </section>
 
-<section class="section">
-  <h2>Contacto</h2>
-  <p>📧 providec26@gmail.com</p>
-  <p>📞 0960280612</p>
+<section class="band">
+  <div class="container">
+    <div class="title">
+      <small>Indicadores</small>
+      <h2>Capacidad y confianza</h2>
+      <p>Datos corporativos referenciales para mostrar la proyección industrial de PROVIDEC.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><h3>+150</h3><p>Proyectos</p></div>
+      <div class="stat"><h3>+80</h3><p>Clientes</p></div>
+      <div class="stat"><h3>24/7</h3><p>Asistencia</p></div>
+      <div class="stat"><h3>Nacional</h3><p>Cobertura</p></div>
+    </div>
+  </div>
 </section>
 
-<a class="whatsapp" href="https://wa.me/593960280612">💬</a>
+<section id="servicios">
+  <div class="container">
+    <div class="title">
+      <small>Servicios principales</small>
+      <h2>Soluciones para la industria</h2>
+      <p>Atención técnica antes, durante y después de cada servicio.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1533630160910-65f5a1718c65?auto=format&fit=crop&w=900&q=80')"></div><div class="card-body"><div class="icon">🔥</div><h3>Calderas</h3><p>Mantenimiento preventivo, correctivo, reparación y construcción de calderas industriales.</p></div></div>
+      <div class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1565608438257-fac3c27beb36?auto=format&fit=crop&w=900&q=80')"></div><div class="card-body"><div class="icon">🛠️</div><h3>Soldadura</h3><p>Soldadura especializada para estructuras, tuberías y componentes industriales.</p></div></div>
+      <div class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80')"></div><div class="card-body"><div class="icon">⚡</div><h3>Sistemas eléctricos</h3><p>Control, automatización y seguridad en equipos industriales.</p></div></div>
+      <div class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80')"></div><div class="card-body"><div class="icon">⚙️</div><h3>Repuestos</h3><p>Venta de repuestos industriales para continuidad operativa.</p></div></div>
+    </div>
+  </div>
+</section>
 
+<section id="video" class="video">
+  <div class="container split">
+    <div class="video-box">
+      <div class="play">▶</div>
+      <div class="video-text">
+        <h3>Video promocional PROVIDEC</h3>
+        <p id="caption">Mantenimiento de calderas y equipos industriales</p>
+        <div class="progress"><span></span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>30 segundos sobre nuestra labor</h3>
+      <p>Esta sección simula un video corporativo dinámico sobre los servicios de PROVIDEC: calderas, soldadura, reparación industrial, sistemas eléctricos y venta de repuestos.</p>
+      <p>Ideal para presentar la empresa de forma didáctica, clara y profesional.</p>
+      <a class="btn btn-orange" href="https://wa.me/593960280612" target="_blank">Solicitar asesoría</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="title">
+      <small>Cultura corporativa</small>
+      <h2>Valores PROVIDEC</h2>
+    </div>
+    <div class="values">
+      <div class="value"><h3>Seguridad</h3><p>Cuidamos personas, equipos e instalaciones.</p></div>
+      <div class="value"><h3>Calidad</h3><p>Soluciones técnicas responsables y eficientes.</p></div>
+      <div class="value"><h3>Rapidez</h3><p>Respuesta oportuna ante necesidades críticas.</p></div>
+      <div class="value"><h3>Compromiso</h3><p>Acompañamiento antes, durante y después.</p></div>
+      <div class="value"><h3>Innovación</h3><p>Mejora continua en procesos técnicos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <div class="container">
+    <div class="title">
+      <small>Contacto</small>
+      <h2>Solicita asesoría técnica</h2>
+      <p>Comunícate con PROVIDEC para mantenimiento, reparación, construcción de calderas o venta de repuestos industriales.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-card"><h3>Correo</h3><p>providec26@gmail.com</p><a href="mailto:providec26@gmail.com">Enviar correo</a></div>
+        <div class="contact-card"><h3>WhatsApp</h3><p>0960280612</p><a href="https://wa.me/593960280612" target="_blank">Escribir ahora</a></div>
+        <div class="contact-card"><h3>Cobertura</h3><p>Atención técnica a nivel nacional en Ecuador.</p></div>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Nombre de la empresa">
+        <input type="email" placeholder="Correo electrónico">
+        <input type="text" placeholder="Servicio requerido">
+        <textarea rows="5" placeholder="Describe tu necesidad técnica"></textarea>
+        <button class="btn btn-orange" onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUGBggHCA8ICAgPHhERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERH/wAARCAD6AYQDAREAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAAAAECAwQFBgcI/8QAPBAAAgIBAwMDAgMFBgQHAAAAAAECEQADBBIhMQVBUWEGInGBkTKhEzLB0QcUI1JicsIVQ1OSovD/xAAZAQADAQEBAAAAAAAAAAAAAAABAgMABAX/xAAiEQACAgICAgMBAQAAAAAAAAAAAQIRAyESMQQiQTJRYXH/2gAMAwEAAhEDEQA/APj62mwmj0p//2Q==" alt="PROVIDEC"><p>“Donde la energía se vuelve confiable”. Empresa ecuatoriana especializada en mantenimiento, reparación y construcción de equipos industriales.</p></div>
+    <div><h3>Empresa</h3><a href="#nosotros">Nosotros</a><a href="#servicios">Servicios</a><a href="#contacto">Contacto</a></div>
+    <div><h3>Servicios</h3><a href="#servicios">Calderas</a><a href="#servicios">Soldadura</a><a href="#servicios">Repuestos</a></div>
+    <div><h3>Contacto</h3><a href="mailto:providec26@gmail.com">providec26@gmail.com</a><a href="https://wa.me/593960280612" target="_blank">0960280612</a></div>
+  </div>
+  <div class="copy">© 2026 PROVIDEC S.A. Todos los derechos reservados.</div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/593960280612?text=Hola%20PROVIDEC,%20necesito%20asesoría%20técnica" target="_blank">💬</a>
+
+<script>
+const captions=[
+"Mantenimiento de calderas y equipos industriales",
+"Reparación técnica para procesos críticos",
+"Soldadura especializada y soluciones metálicas",
+"Sistemas eléctricos, control y seguridad",
+"Repuestos industriales para continuidad operativa"
+];
+let c=0;
+setInterval(()=>{c=(c+1)%captions.length;document.getElementById('caption').textContent=captions[c];},4500);
+function enviarWhatsApp(){
+  window.open("https://wa.me/593960280612?text="+encodeURIComponent("Hola PROVIDEC, deseo solicitar información sobre servicios industriales."),"_blank");
+}
+</script>
 </body>
 </html>
